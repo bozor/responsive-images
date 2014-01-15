@@ -35,7 +35,7 @@ a:hover { text-decoration: none; }
     font-style: normal;
 }
 
-h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 3.2em; line-height: 1em; letter-spacing: -0.05em; padding-bottom: 15px; }
+h1 { color: #414042; /*color: #e82c2e;*/ font-family: 'dincond-boldbold'; font-size: 2.9em; line-height: 1em; letter-spacing: -0.05em; padding-bottom: 15px; }
 h2 { color: #414042; font-family: 'dincond-regularregular'; font-size: 1.8em; letter-spacing: -0.05em; padding-bottom: 15px; text-transform: uppercase; }
 h2 span { font-family: 'dincond-boldbold'; }
 h3 { color: #666766; font-family: 'dincond-boldbold'; font-size: 1.4em; letter-spacing: -0.05em; padding-bottom: 15px; }
@@ -54,7 +54,7 @@ ul.form li { overflow: hidden; padding-bottom: 10px; }
 ul.form li label { display: block; font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.85em; }
 ul.form input,
 ul.form textarea,
-ul.form select { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.85em; resize: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; width: 40%; }
+ul.form select { font-family: 'Source Sans Pro', sans-serif; color: #414042; font-size: 0.85em; resize: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; width: 40%; border: none; background: #fff; border: 1px solid #ddd; border-radius: 0; }
 ul.form input,
 ul.form textarea { padding: 5px; }
 ul.form select { padding-left: 2px; }
@@ -79,7 +79,7 @@ footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 
 #wrapper { overflow: hidden; }
 
 #splash { display: none; background: rgba(140,0,0,0.3); }
-#text { padding: 20px; background: #fff }
+#text { padding: 20px; background: #fff; }
 
 /* content page */
 
@@ -98,33 +98,104 @@ footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 
 
 /* ---------------- */
 /* Responsive */
+/* ---------------- */
+/* Responsive */
+
+/* high res */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  #logo { -webkit-background-size: 960px 600px; }
+
+  #logo { background-position: -480px 0; }
+}
 
 @media only screen and (min-width: 1176px) {
 
-	/* Header */
-	
-	/* Footer */
+  /* maps */
+
+  #map { height: 350px; }
+  
+  /* Header */
+
+  /* Footer */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-	/* Main Layout */
-	
-	/* Footer */
+  /* maps */
+  
+  #map { height: 300px; }
+
+  /* Main Layout */
+    
+  header > div { padding-top: 10px; }
+
+  .col-3 #content,
+  .col-2 #content { width: 70%; }
+  #narrow { float: left; width: 30%; }
+  .col-3 #narrow #other,
+  .col-3 #narrow #links { float: none; width: 100%; padding: 0; }
+  .col-2 #links { width: 30%; }
+
+  .touch #nav { position: absolute; right: 0; width: 50%; margin-left: 50%; }
+
+  /* Footer */
+
+  #footer-text { float: none; width: 100%; }
+
+  footer ol { float: none; width: 100%; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+  /* Main Layout */
+  
+  .col-3 #content,
+  .col-2 #content { width: 65%; }
+  #narrow { float: left; width: 35%; }
+  .col-2 #links { width: 35%; }
+  
+  /*#splash > a > .splash-title { font-size: 0.5em; }
+  #splash > a > .splash-cta { font-size: 0.8em; }*/
 }
 
 @media only screen and (max-width: 767px) {
 
-	/* Header */
-	
+  /* Main Layout */
+  
+  header > div { padding: 10px 0; }
+  footer > div { padding: 0 0 10px; }
 
-	/* Main Layout */
-	
-	
-	/* Footer */
+  #main { padding: 10px 0; }
+
+  #links,
+  #content,
+  #other { float: none; width: 100%; padding: 0; }
+  
+  .col-2 #links,
+  .col-2 #content,
+  .col-3 #links,
+  .col-3 #content,
+  .col-3 #other { float: none; width: 100%; }
+  
+  /*#splash > a > .splash-title { font-size: 0.6em; }
+  #splash > a > .splash-cta { font-size: 0.6em; }*/
+  
+  /* maps */
+  
+  #map { height: 200px; }
+  
+  /* Header */
+  
+  #main { position: relative; clear: both; }
+  
+  /* Footer */
+  #footer-text { float: none; width: 100%; }
+  footer ol { display: none; }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-	/* Header */
+  /* Header */
+
 }
