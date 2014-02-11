@@ -78,13 +78,21 @@ footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 
 #main { padding: 20px 0; -webkit-transition: 1000ms all ease; -moz-transition: 1000ms all ease; -o-transition: 1000ms all ease; -ms-transition: 1000ms all ease; transition: 1000ms all ease; }
 #wrapper { overflow: hidden; }
 
-#splash { display: none; background: rgba(140,0,0,0.3); }
+#splash { background: rgba(140,0,0,0.3); }
 #text { padding: 20px; background: #fff; }
 
 /* content page */
 
 #splash { float: none; width: 100%; }
 #splash > img { max-width: 100%; height: auto; display: block; }
+
+.splash-bottom { background: #ccc; padding: 15px 0; }
+.splash-inner { position: relative; max-width: 1160px; margin: 0 auto; padding: 0 10px; }
+
+#splash .splash-bottom a { position: relative; display: block; color: #fff; overflow: hidden; z-index: 10; text-decoration: none; }
+#splash .splash-bottom a strong { display: inline-block; font-family: 'dincond-boldbold'; font-size: 6em; line-height: 1em; text-transform: uppercase; letter-spacing: -0.05em; vertical-align: middle; }
+#splash .splash-bottom a span { display: inline-block; font-family: 'dincond-regularregular'; font-size: 2.8em; line-height: 1em; max-width: 220px; opacity: 0.65; letter-spacing: -0.05em; padding-left: 0.75em; vertical-align: middle; }
+#splash .splash-bottom > .splash-inner > span { position: absolute; right: 10px; bottom: 0px; color: #fff; }
 
 /* ---------------- */
 /* Header */
@@ -104,98 +112,102 @@ footer > div { position: relative; max-width: 1160px; min-height: 30px; margin: 
 /* high res */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  #logo { -webkit-background-size: 960px 600px; }
+	#logo { -webkit-background-size: 960px 600px; }
 
-  #logo { background-position: -480px 0; }
+	#logo { background-position: -480px 0; }
 }
 
 @media only screen and (min-width: 1176px) {
 
-  /* maps */
+	/* maps */
 
-  #map { height: 350px; }
-  
-  /* Header */
+	#map { height: 350px; }
 
-  /* Footer */
+	/* Header */
+
+	/* Footer */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-  /* maps */
-  
-  #map { height: 300px; }
+	/* maps */
 
-  /* Main Layout */
-    
-  header > div { padding-top: 10px; }
+	#map { height: 300px; }
 
-  .col-3 #content,
-  .col-2 #content { width: 70%; }
-  #narrow { float: left; width: 30%; }
-  .col-3 #narrow #other,
-  .col-3 #narrow #links { float: none; width: 100%; padding: 0; }
-  .col-2 #links { width: 30%; }
+	/* Main Layout */
 
-  .touch #nav { position: absolute; right: 0; width: 50%; margin-left: 50%; }
+	header > div { padding-top: 10px; }
 
-  /* Footer */
+	.col-3 #content,
+	.col-2 #content { width: 70%; }
+	#narrow { float: left; width: 30%; }
+	.col-3 #narrow #other,
+	.col-3 #narrow #links { float: none; width: 100%; padding: 0; }
+	.col-2 #links { width: 30%; }
 
-  #footer-text { float: none; width: 100%; }
+	.touch #nav { position: absolute; right: 0; width: 50%; margin-left: 50%; }
 
-  footer ol { float: none; width: 100%; }
+	/* Footer */
+
+	#footer-text { float: none; width: 100%; }
+
+	footer ol { float: none; width: 100%; }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
-  /* Main Layout */
-  
-  .col-3 #content,
-  .col-2 #content { width: 65%; }
-  #narrow { float: left; width: 35%; }
-  .col-2 #links { width: 35%; }
-  
-  /*#splash > a > .splash-title { font-size: 0.5em; }
-  #splash > a > .splash-cta { font-size: 0.8em; }*/
+	/* Main Layout */
+
+	.col-3 #content,
+	.col-2 #content { width: 65%; }
+	#narrow { float: left; width: 35%; }
+	.col-2 #links { width: 35%; }
+
+	/* splash */
+
+	#splash .splash-bottom a { padding-bottom: 15px; }
+	#splash .splash-bottom a strong { display: block; }
+	#splash .splash-bottom a span { display: block; padding: 0 0 10px; max-width: 100%; }
+	#splash .splash-bottom > .splash-inner > span  { right: auto; left: 10px; }
 }
 
 @media only screen and (max-width: 767px) {
+  
+	html { font-size: 0.65em; }
 
-  /* Main Layout */
-  
-  header > div { padding: 10px 0; }
-  footer > div { padding: 0 0 10px; }
+	/* Main Layout */
 
-  #main { padding: 10px 0; }
+	header > div { padding: 10px 0; }
+	footer > div { padding: 0 0 10px; }
 
-  #links,
-  #content,
-  #other { float: none; width: 100%; padding: 0; }
-  
-  .col-2 #links,
-  .col-2 #content,
-  .col-3 #links,
-  .col-3 #content,
-  .col-3 #other { float: none; width: 100%; }
-  
-  /*#splash > a > .splash-title { font-size: 0.6em; }
-  #splash > a > .splash-cta { font-size: 0.6em; }*/
-  
-  /* maps */
-  
-  #map { height: 200px; }
-  
-  /* Header */
-  
-  #main { position: relative; clear: both; }
-  
-  /* Footer */
-  #footer-text { float: none; width: 100%; }
-  footer ol { display: none; }
-}
+	#main { position: relative; clear: both; padding: 10px 0; }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#links,
+	#content,
+	#other { float: none; width: 100%; padding: 0; }
 
-  /* Header */
+	.col-2 #links,
+	.col-2 #content,
+	.col-3 #links,
+	.col-3 #content,
+	.col-3 #other { float: none; width: 100%; }
 
+	/* maps */
+
+	#map { height: 200px; }
+
+	/* Header */
+
+
+	/* splash */
+
+	#splash .splash-bottom a { padding-bottom: 15px; }
+	#splash .splash-bottom a strong { display: block; }
+	#splash .splash-bottom a span { display: block; padding: 0 0 10px; max-width: 100%; }
+	#splash .splash-bottom > .splash-inner > span  { right: auto; left: 10px; }
+
+	/* Footer */
+
+	#footer-text { float: none; width: 100%; }
+	footer ol { display: none; }
 }
